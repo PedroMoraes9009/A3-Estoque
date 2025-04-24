@@ -1,0 +1,5 @@
+com\mycompany\estoque\Estoque.class
+model\Categoria.class
+view\MenuView.class
+controller\ProdutoController.class
+model\Produto.class
