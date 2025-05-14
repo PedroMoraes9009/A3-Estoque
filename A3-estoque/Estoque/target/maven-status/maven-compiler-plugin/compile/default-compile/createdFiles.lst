@@ -1,0 +1,8 @@
+com\mycompany\estoque\Estoque.class
+model\Categoria.class
+dao\CategoriaDAO.class
+dao\Conexao.class
+dao\ProdutoDAO.class
+controller\ProdutoController.class
+model\Produto.class
+view\MenuView.class
