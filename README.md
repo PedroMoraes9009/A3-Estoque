@@ -7,4 +7,4 @@ Integrantes:
 . Cauã Capella Pereira - 1072511690 - CauaCapella
 . Ian Bertoldi de Medeiros - 10724253206 - ianbmn
 . Pedro Henrique Marinho Moraes - 1072121706 - PedroMoraes9009
-. Rodrigo Larsen Pacheco - 
+. Rodrigo Larsen Pacheco - 10725117845
