@@ -3,7 +3,8 @@ O trabalho consiste em desenvolver o software de controle de estoque para o prob
 Atualizado dia 14/05/2025
 
 Integrantes:
-. Cauã Capella Pereira
-. Ian Bertoldi de Medeiros
+
+. Cauã Capella Pereira - 
+. Ian Bertoldi de Medeiros -
 . Pedro Henrique Marinho Moraes - 1072121706
-. Rodrigo Larsen Pacheco 
+. Rodrigo Larsen Pacheco - 
