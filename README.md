@@ -6,5 +6,5 @@ Integrantes:
 
 . Cauã Capella Pereira - 
 . Ian Bertoldi de Medeiros -
-. Pedro Henrique Marinho Moraes - 1072121706
+. Pedro Henrique Marinho Moraes - 1072121706 - PedroMoraes9009
 . Rodrigo Larsen Pacheco - 
