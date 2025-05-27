@@ -8,3 +8,5 @@ Integrantes:
 . Ian Bertoldi de Medeiros - 10724253206 - ianbmn
 . Pedro Henrique Marinho Moraes - 1072121706 - PedroMoraes9009
 . Rodrigo Larsen Pacheco - 10725117845 - Alecrim99k
+
+Usuário e senha do BD:
