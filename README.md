@@ -1,4 +1,4 @@
-<img width="1470" alt="image" src="https://github.com/user-attachments/assets/ee9f088c-edcf-43b8-93d6-db12d57ef494" /># A3-Estoque
+# A3-Estoque
 O trabalho consiste em desenvolver o software de controle de estoque para o problema contextualizado.
 Atualizado dia 14/05/2025
 
@@ -12,7 +12,7 @@ Integrantes:
 Usuário e senha do BD: Rodrigo Larsen Pacheco e a senha do BD é 1234
 
 
-## ✅ Requisitos Funcionais
+##  Requisitos Funcionais
 
 - [x] Cadastro de produtos com nome, preço, quantidade e categoria.
 - [x] Cadastro de categorias com nome, tamanho e tipo de embalagem.
@@ -24,7 +24,7 @@ Usuário e senha do BD: Rodrigo Larsen Pacheco e a senha do BD é 1234
 - [x] Exibe menu interativo via terminal.
 - [x] Permite encerrar o sistema com segurança.
 
-## ⚙️ Requisitos Não Funcionais
+## ⚙ Requisitos Não Funcionais
 
 - [x] Desenvolvido em Java.
 - [x] Utiliza arquitetura MVC.
