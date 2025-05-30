@@ -24,7 +24,7 @@ Usuário e senha do BD: Rodrigo Larsen Pacheco e a senha do BD é 1234
 - [x] Exibe menu interativo via terminal.
 - [x] Permite encerrar o sistema com segurança.
 
-## ⚙ Requisitos Não Funcionais
+##  Requisitos Não Funcionais
 
 - [x] Desenvolvido em Java.
 - [x] Utiliza arquitetura MVC.
