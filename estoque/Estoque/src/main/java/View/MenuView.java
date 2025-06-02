@@ -1,16 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package view;
 
 import controller.ProdutoController;
 import model.Categoria;
+
 import java.util.Scanner;
 
 public class MenuView {
-    private ProdutoController controller = new ProdutoController();
-    private Scanner sc = new Scanner(System.in);
+    private final ProdutoController controller = new ProdutoController();
+    private final Scanner sc = new Scanner(System.in);
 
     public void exibirMenu() {
         int opcao;
@@ -19,37 +16,37 @@ public class MenuView {
             System.out.println("1. Cadastrar Produto");
             System.out.println("2. Listar Produtos");
             System.out.println("0. Sair");
-            System.out.print("Escolha: ");
-            opcao = sc.nextInt();
-            sc.nextLine();
+            opcao = lerInt("Escolha: ");
 
             switch (opcao) {
                 case 1 -> cadastrarProduto();
                 case 2 -> listarProdutos();
-                case 0 -> System.out.println("Encerrando...");
-                default -> System.out.println("Opção inválida!");
+                case 0 -> System.out.println("Encerrando o sistema...");
+                default -> System.out.println("Opção inválida.");
             }
         } while (opcao != 0);
+
+        sc.close();
     }
 
     private void cadastrarProduto() {
-        System.out.print("Nome do produto: ");
-        String nome = sc.nextLine();
-        System.out.print("Preço: ");
-        double preco = sc.nextDouble();
-        System.out.print("Quantidade: ");
-        int qtd = sc.nextInt();
-        sc.nextLine();
+        System.out.println("\n--- CADASTRO DE PRODUTO ---");
+        String nome = lerLinha("Nome do produto: ");
+        double preco = lerDouble("Preço: ");
+        int qtd = lerInt("Quantidade: ");
 
-        System.out.print("Nome da categoria: ");
-        String nomeCat = sc.nextLine();
-        System.out.print("Tamanho (Pequeno/Médio/Grande): ");
-        String tamanho = sc.nextLine();
-        System.out.print("Embalagem (Lata/Vidro/Plástico): ");
-        String embalagem = sc.nextLine();
+        String nomeCat = lerLinha("Nome da categoria: ");
+        String tamanho = lerLinha("Tamanho (Pequeno/Médio/Grande): ");
+        String embalagem = lerLinha("Embalagem (Lata/Vidro/Plástico): ");
 
-        Categoria cat = new Categoria(nomeCat, tamanho, embalagem);
-        controller.adicionarProduto(nome, preco, qtd, cat);
+        if (!validarTamanho(tamanho) || !validarEmbalagem(embalagem)) {
+            System.out.println("Tamanho ou embalagem inválidos.");
+            return;
+        }
+
+        Categoria categoria = new Categoria(nomeCat, tamanho, embalagem);
+        controller.adicionarProduto(nome, preco, qtd, categoria);
+        System.out.println("Produto cadastrado com sucesso.");
     }
 
     private void listarProdutos() {
@@ -57,10 +54,51 @@ public class MenuView {
         if (lista.isEmpty()) {
             System.out.println("Nenhum produto cadastrado.");
         } else {
-            for (var p : lista) {
-                System.out.println(p);
+            System.out.println("\n--- LISTA DE PRODUTOS ---");
+            for (var produto : lista) {
+                System.out.println(produto);
             }
         }
     }
-}
 
+    // ========= UTILIDADES DE ENTRADA =========
+
+    private String lerLinha(String mensagem) {
+        System.out.print(mensagem);
+        return sc.nextLine().trim();
+    }
+
+    private int lerInt(String mensagem) {
+        while (true) {
+            try {
+                System.out.print(mensagem);
+                return Integer.parseInt(sc.nextLine().trim());
+            } catch (NumberFormatException e) {
+                System.out.println("Digite um número inteiro válido.");
+            }
+        }
+    }
+
+    private double lerDouble(String mensagem) {
+        while (true) {
+            try {
+                System.out.print(mensagem);
+                return Double.parseDouble(sc.nextLine().trim());
+            } catch (NumberFormatException e) {
+                System.out.println("Digite um número decimal válido.");
+            }
+        }
+    }
+
+    private boolean validarTamanho(String tamanho) {
+        return tamanho.equalsIgnoreCase("Pequeno") ||
+               tamanho.equalsIgnoreCase("Médio") ||
+               tamanho.equalsIgnoreCase("Grande");
+    }
+
+    private boolean validarEmbalagem(String embalagem) {
+        return embalagem.equalsIgnoreCase("Lata") ||
+               embalagem.equalsIgnoreCase("Vidro") ||
+               embalagem.equalsIgnoreCase("Plástico");
+    }
+}
